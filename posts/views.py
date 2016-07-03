@@ -11,13 +11,22 @@ def post_detail(request):
 	context = {
 		"title": "Detail"
 	}
-	
+
 	return render(request, "index.html", context)
 
 def post_list(request):
-	context = {
-		"title": "List"
-	}
+	
+	if request.user.is_authenticated():
+
+		context = {
+			"title": "My User List"
+		}
+
+	else:
+
+		context = {
+			"title": "List"
+		}
 
 	return render(request, "index.html", context)
 
