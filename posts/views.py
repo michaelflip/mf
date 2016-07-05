@@ -22,7 +22,7 @@ def post_create(request):
 	return render(request, "post_form.html", context)
 
 def post_detail(request, id=None):
-	#instance = Post.objects.get(id=3)
+	
 	instance = get_object_or_404(Post, id=id)
 	context = {
 		"title": instance.title,
@@ -37,19 +37,6 @@ def post_list(request):
 		"title": "List",
 		"object_list": queryset
 		}
-
-	# if request.user.is_authenticated():
-
-	# 	context = {
-	# 		"title": "My User List"
-	# 	}
-
-	# else:
-
-	# 	context = {
-	# 		"title": "List"
-	# 	}
-
 	return render(request, "post_list.html", context)
 
 def post_update(request, id=None):
@@ -69,11 +56,8 @@ def post_update(request, id=None):
 	return render(request, "post_form.html", context)
 
 
-
-
 def post_delete(request, id=None):
 	instance = get_object_or_404(Post, id=id)
 	instance.delete()
 	messages.success(request, "Successfully Deleted")
 	return redirect("posts:list")
-

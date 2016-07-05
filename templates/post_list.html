@@ -6,7 +6,7 @@
 /posts/id/
 {% url "posts:detail" id=obj.id %}
 <a href='{{ obj.get_absolute_url }}'>{{ obj.title }}</a><br/>
-{{ obj.content }}<br/>
+{{ obj.content|linebreaks|truncatechars:120 }}<br/>
 {{ obj.timestamp }}<br/>
 {{ obj.updated }}<br/>
 {{ obj.id }}<br/>
