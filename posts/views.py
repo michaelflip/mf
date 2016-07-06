@@ -1,10 +1,7 @@
-from urllib import quote_plus
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
-
-# Create your views here.
 
 from .forms import PostForm
 from .models import Post
@@ -14,24 +11,20 @@ def post_create(request):
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.save()
+		# message success
 		messages.success(request, "Successfully Created")
 		return HttpResponseRedirect(instance.get_absolute_url())
-	else:
-		messages.error(request, "Not Successfully Created")
 	context = {
 		"form": form,
 	}
 	return render(request, "post_form.html", context)
 
 def post_detail(request, slug=None):
-	share_string = quote_plus(instance.content)
 	instance = get_object_or_404(Post, slug=slug)
 	context = {
 		"title": instance.title,
 		"instance": instance,
-		"share_string": share_string
 	}
-
 	return render(request, "post_detail.html", context)
 
 def post_list(request):
@@ -47,12 +40,18 @@ def post_list(request):
 	except EmptyPage:
 		# If page is out of range (e.g. 9999), deliver last page of results.
 		queryset = paginator.page(paginator.num_pages)
+
+
 	context = {
+		"object_list": queryset, 
 		"title": "List",
-		"object_list": queryset,
 		"page_request_var": page_request_var
 	}
 	return render(request, "post_list.html", context)
+
+
+
+
 
 def post_update(request, slug=None):
 	instance = get_object_or_404(Post, slug=slug)
@@ -60,7 +59,7 @@ def post_update(request, slug=None):
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.save()
-		messages.success(request, "Saved")
+		messages.success(request, "<a href='#'>Item</a> Saved", extra_tags='html_safe')
 		return HttpResponseRedirect(instance.get_absolute_url())
 
 	context = {
@@ -71,10 +70,9 @@ def post_update(request, slug=None):
 	return render(request, "post_form.html", context)
 
 
+
 def post_delete(request, slug=None):
 	instance = get_object_or_404(Post, slug=slug)
 	instance.delete()
-	messages.success(request, "Successfully Deleted")
+	messages.success(request, "Successfully deleted")
 	return redirect("posts:list")
-
-
