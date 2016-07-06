@@ -26,6 +26,9 @@ def post_create(request):
 
 def post_detail(request, slug=None):
 	instance = get_object_or_404(Post, slug=slug)
+	if instance.publish > timezone.now().date() or instance.draft:
+		if not request.user.is_staff or not request.user.is_superuser:
+		raise Http404
 	share_string = quote_plus(instance.content)
 	context = {
 		"title": instance.title,
@@ -35,7 +38,7 @@ def post_detail(request, slug=None):
 	return render(request, "post_detail.html", context)
 
 def post_list(request):
-	queryset_list = Post.objects.all() #.order_by("-timestamp")
+	queryset_list = Post.objects.active() #.order_by("-timestamp")
 	paginator = Paginator(queryset_list, 10) # Show 25 contacts per page
 	page_request_var = "page"
 	page = request.GET.get(page_request_var)
