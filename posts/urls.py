@@ -22,7 +22,7 @@ from .views import (
     post_detail,
     post_update,
     post_delete,
-    landing_home,
+    
     )
 
 urlpatterns = [
