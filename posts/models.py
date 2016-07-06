@@ -15,11 +15,12 @@ def upload_location(instance, filename):
 	# filebase, extension = filename.split(".")
 	# return "%s/%s.%s" %(instance.id, instance.id, filename)
 	return "%s/%s" %(instance.id, filename)
+
+
 class Post(models.Model):
-	title = models.CharField(max_length=200)
+	title = models.CharField(max_length=120)
 	slug = models.SlugField(unique=True)
 	image = models.ImageField(upload_to=upload_location,
-
 		null=True, 
 		blank=True, 
 		width_field="width_field", 
@@ -42,7 +43,6 @@ class Post(models.Model):
 	class Meta:
 		ordering = ["-timestamp", "-updated"]
 
-
 def create_slug(instance, new_slug=None):
     slug = slugify(instance.title)
     if new_slug is not None:
@@ -55,9 +55,14 @@ def create_slug(instance, new_slug=None):
     return slug
 
 
+
+
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
-    if not instance.slug:
-        instance.slug = create_slug(instance)
+	if not instance.slug:
+		instance.slug = create_slug(instance)
+
+
+
 
 
 
