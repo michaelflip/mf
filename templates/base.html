@@ -29,10 +29,10 @@
     <header id="first">
         <div class="header-content">
             <div class="inner">
-                <h1 class="grime">Michaelflip.com</h1>
-                <h4>{% block head_title %} Michaelflip.com {% endblock head_title %}</h4>
+                <h1 class="grime">{% block head_title %} Michaelflip.com {% endblock head_title %}</h1>
+                <h4>{% include "messages_display.html" %}</h4>
                 <hr>
-                <p>{% include "messages_display.html" %}</p>
+                
             </div>
         </div>
         <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
