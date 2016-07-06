@@ -6,10 +6,15 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 
-
+def upload_location(instance, filename):
+	# filebase, extension = filename.split(".")
+	# return "%s/%s.%s" %(instance.id, instance.id, filename)
+	return "%s/%s" %(instance.id, filename)
 class Post(models.Model):
 	title = models.CharField(max_length=200)
-	image = models.ImageField(null=True, blank=True, 
+	image = models.ImageField(upload_to=upload_location,
+		null=True, 
+		blank=True, 
 		width_field="width_field", 
 		height_field="height_field")
 	height_field = models.IntegerField(default=0)
