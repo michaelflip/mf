@@ -19,12 +19,12 @@
 
 <p><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></p>
 
-{{ instance.content|linebreaks }}<br/>
+<br/>
 <p>
 
 <a href="https://twitter.com/home?status={{ instance.content|truncatechars:80|urlify }}%20{{ request.build_absolute_uri }}">
 Share on Twitter
-</a>
+</a> |
 
 <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'>Share on Google+</a></p>
 
