@@ -7,6 +7,8 @@
 
 
 
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
 <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
 Share on Facebook
 </a>
@@ -16,9 +18,6 @@ Share on Twitter
 </a>
 
 <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'>
-
-{% block content %}
-<div class='col-sm-6 col-sm-offset-3'>
     {% if instance.image %}
     <img src='{{ instance.image.url }}' class='img-responsive' />
     {% endif %}
