@@ -28,7 +28,6 @@ def post_detail(request, id=None):
 	context = {
 		"title": instance.title,
 		"instance": instance,
-		"page_request_var": page_request_var
 	}
 
 	return render(request, "post_detail.html", context)
@@ -48,7 +47,8 @@ def post_list(request):
 		queryset = paginator.page(paginator.num_pages)
 	context = {
 		"title": "List",
-		"object_list": queryset
+		"object_list": queryset,
+		"page_request_var": page_request_var
 	}
 	return render(request, "post_list.html", context)
 
