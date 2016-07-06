@@ -48,7 +48,7 @@ def post_list(request):
 	if query:
 		queryset_list = queryset_list.filter(
 			Q(title__icontains=query)|
-			Q(conten__icontainst=query)|
+			Q(content__icontainst=query)|
 			Q(user__first_name__icontains=query) |
 			Q(user__last_name__icontains=query)
 			).distinct()
