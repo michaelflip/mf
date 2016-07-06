@@ -7,6 +7,14 @@ http://www.bootstrapzero.com
 
 @import url(https://fonts.googleapis.com/css?family=Questrial);
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
+@font-face
+
+{
+    font-family: 'DoubleFeature20import';
+    src: url('../fonts/DoubleFeature20.ttf');
+
+}
+
 
 html,
 body {
@@ -74,8 +82,11 @@ p {
     background-color: #222;
 }
 
-.grime {
-    font-family: 'DoubleFeature20';
+
+
+.grime
+{
+    font-family: 'DoubleFeature20import';
     src: url('../fonts/DoubleFeature20.ttf');
 
 }
