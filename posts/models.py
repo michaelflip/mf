@@ -12,6 +12,7 @@ def upload_location(instance, filename):
 	return "%s/%s" %(instance.id, filename)
 class Post(models.Model):
 	title = models.CharField(max_length=200)
+	slug = models.SlugField(unique=True)
 	image = models.ImageField(upload_to=upload_location,
 		null=True, 
 		blank=True, 
