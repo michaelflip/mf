@@ -58,8 +58,8 @@ def post_list(request):
 	context = {
 		"object_list": queryset, 
 		"title": "List",
-		"page_request_var": page_request_var
-		"today": today,
+		"page_request_var": page_request_var,
+		"today": today
 	}
 	return render(request, "post_list.html", context)
 
