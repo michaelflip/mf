@@ -74,6 +74,13 @@ p {
     background-color: #222;
 }
 
+.grime {
+    font-family: 'DoubleFeature20';
+    src: url('../fonts/DoubleFeature20.ttf');
+    src: local('../fonts/DoubleFeature20.ttf')
+
+}
+
 .cursive {
     font-family: 'Dancing Script', cursive;
     text-transform: none;
