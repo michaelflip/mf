@@ -74,7 +74,8 @@ def post_list(request):
 	return render(request, "post_list.html", context)
 
 
-
+def landing_home(request):
+	return HttpResponse("<h1>It worked!</h1>")
 
 
 def post_update(request, slug=None):
