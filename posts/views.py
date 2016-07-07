@@ -105,3 +105,6 @@ def post_delete(request, slug=None):
 
 def landing(request):
 	return render(request, "landing.html", {})
+
+def beats(request):
+	return render(request, "beats.html", {})

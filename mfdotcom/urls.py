@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^posts/', include("posts.urls", namespace='posts')),
     url(r'^$', "posts.views.landing"),
+    url(r'^beats/$', "posts.views.beats"),
 ]
 
 if settings.DEBUG:
