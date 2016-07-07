@@ -74,7 +74,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #333;
+    background-color: #000000;
 }
 
 .bg-dark {
@@ -109,7 +109,7 @@ p {
 }
 
 .modal-content {
-    background-color: #1d1d1d;
+    background-color: #000000;
 }
 
 section {
@@ -131,7 +131,7 @@ footer {
 .navbar-default {
     border-color: rgba(35,35,35,.05);
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
-    background-color: #222;
+    background-color: #000000;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
     transition: all .4s;
@@ -152,7 +152,7 @@ footer {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: #181818;
+    background-color: #000000;
 }
 .navbar-default .navbar-toggle, .navbar-default .navbar-collapse {
     border-color: transparent;
