@@ -102,3 +102,6 @@ def post_delete(request, slug=None):
 	instance.delete()
 	messages.success(request, "Successfully deleted")
 	return redirect("posts:list")
+
+def landing(request):
+	return HttpResponse("<h1>Works</h1>")
