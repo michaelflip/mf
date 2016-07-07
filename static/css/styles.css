@@ -249,8 +249,8 @@ header {
     text-align: center;
     color: #fff;
     width: 100%;
-    background-color: #c9c9c9;
-    background-image: url('https://splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-Slate-Stone-Xeromatic-1440x953.jpg');
+    background-color: #000000;
+    background-image: url('https://s3-us-west-1.amazonaws.com/michaelflip/sfbynikiv.jpg');
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
