@@ -259,9 +259,13 @@ header {
 }
 
 header .header-content {
-    position: relative;
-    width: 100%;
-    padding: 100px 15px;
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
     text-align: center;
     z-index: 2;
 }
