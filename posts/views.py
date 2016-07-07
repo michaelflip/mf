@@ -104,4 +104,4 @@ def post_delete(request, slug=None):
 	return redirect("posts:list")
 
 def landing(request):
-	return HttpResponse("<h1>Works</h1>")
+	return render(request, "landing.html", {})
