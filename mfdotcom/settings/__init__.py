@@ -8,4 +8,4 @@ except:
 	live = True
 
 if live:
-	from .product import *
+	from .production import *
