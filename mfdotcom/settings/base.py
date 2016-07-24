@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'posts',
 ]
 
@@ -127,5 +128,25 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+AWS_STORAGE_BUCKET_NAME = 'mfstatic'
+
+ACCESS_KEY_ID = None
+SECRET_ACCESS_KEY = None
+
+try:
+    from secrets import *
+except:
+    print 'No secrets file found'
+
+if not ACCESS_KEY_ID:
+    ACCESS_KEY_ID = os.environ.get('ACCESS_KEY_ID')
+    SECRET_ACCESS_KEY = os.environ.get('SECRET_ACCESS_KEY')
+
+AWS_ACCESS_KEY_ID = ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY = SECRET_ACCESS_KEY
