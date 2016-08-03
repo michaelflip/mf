@@ -1,6 +1,13 @@
 {% extends "base.html" %}
-{% block content %}
+{% load urlify %}
 
+{% block head_title %}
+{{ instance.title }} | {{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
 
 <div class='col-sm-6 col-sm-offset-3'>
     <br/> <br/><h1>{{ title }}</h1>
