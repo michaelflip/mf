@@ -10,12 +10,12 @@
 
 <link rel='stylesheet' href='{% static "css/styles.css" %}' />
 <style>
-{% block style %}{% endblock style %}
+{% block style %}
 </style>
 </head>
 <title> {% block head_title %} Michaelflip.com {% endblock head_title %} {% include "messages_display.html" %}</title>
 <body>
-
+{% endblock style %}
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
