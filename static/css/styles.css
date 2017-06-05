@@ -22,7 +22,8 @@ body {
 
 body {
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
-    background-color: #000000;
+    background-color: none;
+	background-image: url('../backgrounds/mfbi.png');
     color: #d3d3d3;
     webkit-tap-highlight-color: #222;
 }
@@ -349,7 +350,7 @@ footer {
     line-height: 1.5;
     color: #eee;
     background-color: none;
-    background-image: url('../backgrounds/mfbi.png');;
+    background-image: url('../backgrounds/mfbi.png');
     border: 1px solid #36333d;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
