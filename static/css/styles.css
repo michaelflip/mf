@@ -257,6 +257,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	opacity 0.2;
 }
 
 header .header-content {
