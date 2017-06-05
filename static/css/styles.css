@@ -348,7 +348,7 @@ footer {
     font-size: 14px;
     line-height: 1.5;
     color: #eee;
-    background-color: #36333d;
+    background-color: none;
     background-image: url('../backgrounds/mfbi.png');;
     border: 1px solid #36333d;
     border-radius: 4px;
