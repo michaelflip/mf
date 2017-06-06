@@ -1,6 +1,8 @@
 /*
+
 Landing Zero theme - A free landing page theme from BootstrapZero
 http://www.bootstrapzero.com
+
 */
 
 @import url(https://fonts.googleapis.com/css?family=Questrial);
@@ -21,7 +23,6 @@ body {
 body {
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
     background-color: #000000;
-    background-image: url('../backgrounds/mfbi.png');
     color: #d3d3d3;
     webkit-tap-highlight-color: #222;
 }
