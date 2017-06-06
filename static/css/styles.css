@@ -1,8 +1,6 @@
 /*
-
 Landing Zero theme - A free landing page theme from BootstrapZero
 http://www.bootstrapzero.com
-
 */
 
 @import url(https://fonts.googleapis.com/css?family=Questrial);
@@ -22,10 +20,8 @@ body {
 
 body {
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
-    background-color: none;
-	background-image: url('../backgrounds/mfbi.png');
-	background-repeat: no-repeat;
-    background-position: right top;
+    background-color: #000000;
+    background-image: url('../backgrounds/mfbi.png');
     color: #d3d3d3;
     webkit-tap-highlight-color: #222;
 }
@@ -111,7 +107,6 @@ p {
 
 .modal-content {
     background-color: #000000;
-	opacity 0.2;
 }
 
 section {
@@ -257,7 +252,6 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-	opacity 0.2;
 }
 
 header .header-content {
@@ -353,8 +347,8 @@ footer {
     font-size: 14px;
     line-height: 1.5;
     color: #eee;
-    background-color: none;
-    background-image: url('../backgrounds/mfbi.png');
+    background-color: #36333d;
+    background-image: none;
     border: 1px solid #36333d;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
