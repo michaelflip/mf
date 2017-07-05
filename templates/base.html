@@ -1,22 +1,35 @@
 {% load staticfiles %}
-<!--DOCTYPE html -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
-<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<link rel='stylesheet' href='{% static "css/styles.css" %}' />
-<style>
-{% block style %}
-</style>
+    <title> {% block head_title %} Michaelflip.com {% endblock head_title %} {% include "messages_display.html" %}</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<title> {% block head_title %} Michaelflip.com {% endblock head_title %} {% include "messages_display.html" %}</title>
-<body>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 {% endblock style %}
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -26,65 +39,60 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
-    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="../../"><i class="glyphicon glyphicon-fire"></i> Michaelflip.com</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Automatix3000.com</a>
             </div>
-            <div class="navbar-collapse collapse" id="bs-navbar">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="../../">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/posts/">Blog</a>
+                        <a class="page-scroll" href="/posts/">News</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/beats/">Beats</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="http://facebook.com/themichaelflip">Facebook</a>
+                        <a class="page-scroll" href="http://facebook.com/theautomatix">Facebook</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="http://soundcloud.com/michaelflip">Soundcloud</a>
+                        <a class="page-scroll" href="http://soundcloud.com/theautomatix">Soundcloud</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
     </nav>
-
-
-<div class='container'>
 {% block content %}{% endblock content %}
-</div>
-<style>
-@font-face
-{
-    font-family: 'DoubleFeature20import';
-    src: url('{% static "fonts/DoubleFeature20.ttf" %}');
-}
 
 
-</style>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
 </body>
+
 </html>
-
-
-
-
