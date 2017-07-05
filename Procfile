@@ -1,1 +1,0 @@
-web: gunicorn mfdotcom.wsgi --log-file -
