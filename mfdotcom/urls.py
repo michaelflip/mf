@@ -25,8 +25,6 @@ urlpatterns = [
     url(r'^posts/', include("posts.urls", namespace='posts')),
     url(r'^$', "posts.views.landing"),
     url(r'^beats/$', "posts.views.beats"),
-    url(r'^epk/$', "http://www.reverbnation.com/rpk/michaelflip"),
-    
 ]
 
 if settings.DEBUG:
